@@ -1,3 +1,3 @@
-## Accessibility-Tool
+# Accessibility-Tool
 
-# This Accessibilty Tool 
+## This Accessibilty Tool 
