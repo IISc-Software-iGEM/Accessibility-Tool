@@ -2,10 +2,6 @@
 
 document.addEventListener("DOMContentLoaded", function() {
 
-	// Accessibility tool
-	const accessibilityModal = document.getElementById('');
-	const closeBtn = document.getElementById('');
-	const accessibilityTools = document.getElementById('');
   
 	const accessibilityMenuURL = './Toolbar.html'; 	
 	const stylesURL = './styles.scss'; 
