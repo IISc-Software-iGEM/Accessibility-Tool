@@ -1,0 +1,216 @@
+#accesstool{
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    background-color: transparent;
+    border: 1px solid #279af1;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    align-items: center;
+    bottom : 40px;
+    left: 10px;
+    z-index: 10;
+    &:hover{
+        background-color: rgba(143, 207, 237, 0.434);
+        opacity: 0.8;
+    }
+    span{
+        font-size: 60px;
+        color: #279af1;
+        align-items: center;
+        cursor: pointer;
+    }
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.access-tool-bar{
+    color: #333;
+    overflow-y: auto;
+    box-shadow: 1px 0 4px 0 #777;
+    position: fixed;
+    height: 100vh;
+    
+    width: 320px;
+    top: 0;
+    left: 0;
+    background-color: hsla(211, 100%, 16%, 0.937);
+    z-index: 9999999;
+    transition: opacity .4s !important;
+    .main-header{
+        position: fixed;
+        text-align: center;
+        text-transform: uppercase;
+        width: 290px;
+        line-height: 1.2;
+        font-size: 16px !important;
+        font-weight: bold;
+        padding: 10px;
+        color: black;
+        margin-top: 20px;
+        background-color: #fff;
+        z-index: 2;
+        button{
+            position: absolute;
+            display: inline-block;
+            cursor: pointer;
+            color: black;
+            font-weight: bold;
+            line-height: 1.1;
+            font-size: 25px !important;
+            right: 5px;
+            top: 0;
+            padding: 8px 5px 8px;
+            border: none;
+            background-color: transparent;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                color: #a50000;
+            }
+        }
+    
+        
+    }
+    }
+
+    .color {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        position: relative; /* Required for absolute positioning of the icon */
+        background-color: #fff;
+        color: black;
+        margin-top: 80px;
+        padding: 10px;
+        height: 280px;
+      }
+      
+      .header {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        height: 30px;
+        font-size: 20px;
+        font-weight: bold;
+        border-bottom: 1px solid #333;
+        align-self: flex-start; /* Align heading to top left */
+        margin-bottom: 1px; /* Add space between heading and icons */
+        padding-bottom: 1px; /* Add space between heading and border */
+      }
+      
+      .icon {
+        display: flex;
+        flex-direction: column; /* Stack icon and text vertically */
+        align-items: center; /* Center content horizontally */
+        justify-content: center; /* Center content vertically within the icon */
+        width: calc(33.3% - 8px);
+        margin: 10px; /* Add space between icons if needed */
+        border: 1px solid #279af1;
+        padding: 5px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          background-color: rgba(182, 181, 181, 0.29);
+        //   color: white;
+          border: 1px solid #279af1;
+        }
+      }
+      
+      .icon-row {
+        display: flex; /* Arrange icons horizontally */
+        justify-content: space-between; /* Distribute icons evenly */
+        flex-wrap: wrap; /* Allow icons to wrap to a new line */
+        padding: 4px; /* Add space between icons and edges of container */
+        margin: 4px;
+      }
+      .icn-rw{
+        display: flex; /* Arrange icons horizontally */
+        justify-content: center; /* Distribute icons evenly */
+        flex-wrap: wrap; /* Allow icons to wrap to a new line */
+        padding: 4px; /* Add space between icons and edges of container */
+        margin: 4px;
+      }
+      .icon i {
+        font-size: 40px; /* Adjust icon size as needed */
+        color: #6eb7f0; /* Adjust icon color as needed */
+        margin-bottom: 5px;
+      }
+      
+      .icon span {
+        text-align: center;
+        padding-top: 5px;
+        font-size: medium;
+      }
+
+      .Cursor{
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        position: relative; /* Required for absolute positioning of the icon */
+        background-color: #fff;
+        color: black;
+        margin-top: 20px;
+        padding: 10px;
+        height: 280px;
+
+      }
+      .Reset{
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        position: relative; /* Required for absolute positioning of the icon */
+        background-color: #fff;
+        color: black;
+        margin-top: 20px;
+        padding: 10px;
+        height: 150px;
+      }
+      
+      .preset-button {
+        font-size: medium;
+        border: 1px solid #279af1;
+        border-radius: 20px;
+        width: 96%; /* Adjust width as needed */
+        height: 40px;
+        padding-left: 12px; /* Adjust padding-left as needed */
+        margin-top: 10px;
+        display: flex; /* Make the preset-button a flexbox for alignment */
+        align-items: center; /* Align content vertically within the button */
+        justify-content: space-between; /* Align content horizontally at the right end */
+      }
+      
+      .preset-button button {
+        position: relative; /* Retain relative positioning for hover effects */
+        display: inline-block;
+        cursor: pointer;
+        color: black;
+        line-height: 1.1;
+        font-size: 30px !important;
+        font-weight: 400;
+        padding: 8px 5px 8px;
+        border: none;
+        background-color: transparent;
+        transition: all 0.3s ease-in-out;
+      }
+      
+      .preset-button button:hover {
+        color: #a50000;
+      }
+
+      .access-tool-bar::-webkit-scrollbar {
+        width: 10px; /* Adjust width as needed */
+      }
+      
+      .access-tool-bar::-webkit-scrollbar-track {
+        background-color: #f1f1f1; /* Track color */
+      }
+      
+      .access-tool-bar::-webkit-scrollbar-thumb {
+        background-color: hsla(211, 40%, 45%, 0.529); /* Thumb color */
+        border-radius: 5px; /* Add rounded corners */
+      }
+      
+      
+
+    
+      
+      
