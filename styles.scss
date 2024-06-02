@@ -210,6 +210,23 @@
         background-color: hsla(211, 40%, 45%, 0.529); /* Thumb color */
         border-radius: 5px; /* Add rounded corners */
       }
+
+
+        .invert{
+        filter : invert(1);
+      }
+
+      .grayscale{
+        filter : grayscale(1);
+      }
+    
+      .lowsaturation{
+        filter : saturate(20%);
+      }
+
+      .highsaturation{
+        filter : saturate(200%);
+      }
       
       
 
