@@ -30,6 +30,22 @@ document.addEventListener("DOMContentLoaded", function() {
 			createToolBox.innerHTML = htmlContent;
   
 			document.body.insertBefore(createToolBox, document.body.firstChild);
+			const accessToolButton = document.querySelector(".accesstool");
+		        const accessToolBar = document.querySelector(".access-tool-bar");
+		        const closeButton = document.querySelector(".close-button");
+		  
+		        function toggleAccessibilityToolBar() {
+		          if (accessToolBar.style.visibility === "hidden") {
+		            accessToolBar.style.visibility = "visible";
+		            accessToolBar.style.opacity = 1; // Add opacity for smooth transition
+		          } else {
+		            accessToolBar.style.visibility = "hidden";
+		            accessToolBar.style.opacity = 0; // Add opacity for smooth transition
+		          }
+		        }
+		  
+		        accessToolButton.addEventListener("click", toggleAccessibilityToolBar);
+		        closeButton.addEventListener("click", toggleAccessibilityToolBar);
 		})
 		.catch(error => {
 			console.error('Error fetching resources:', error);
