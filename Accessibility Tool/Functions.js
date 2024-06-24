@@ -234,24 +234,44 @@ document.addEventListener("DOMContentLoaded", function() {
 			const whiteCursorButton = document.querySelector('#whitecursor');
 			const cursorImageUrl = './Images/pointer-white.png';
 			const cursorPointer = './Images/hand-pointer-white.png'; 
+			let whitecursorbutton= false;
 			whiteCursorButton.addEventListener('click', function() {
+			whitecursorbutton = !whitecursorbutton;
+			if(whitecursorbutton){	
 			document.body.style.cursor = `url(${cursorImageUrl}), auto`;
 			const buttons = document.querySelectorAll('button');
 			buttons.forEach(button => button.style.cursor = `url(${cursorPointer}), auto`);
 			const links = document.querySelectorAll('a');
-			links.forEach(link => link.style.cursor = `url(${cursorPointer}), auto`);
+			links.forEach(link => link.style.cursor = `url(${cursorPointer}), auto`);}
+			else{
+				document.body.style.cursor = 'auto';
+				const buttons = document.querySelectorAll('button');
+				buttons.forEach(button => button.style.cursor = 'auto');
+				const links = document.querySelectorAll('a');
+				links.forEach(link => link.style.cursor = 'auto');
+			}
 			});
 
 			//blackcursor
 			const blackCursorButton = document.querySelector('#blackcursor');
 			const cursorImage = './Images/black-pointer.png';
 			const cursorPoint = './Images/hand-pointer-black.png';
+			let blackcursorbutton = false; 
 			blackCursorButton.addEventListener('click', function() {
+			blackcursorbutton = !blackcursorbutton;
+			if (blackcursorbutton) {
 			document.body.style.cursor = `url(${cursorImage}), auto`;
 			const buttons = document.querySelectorAll('button');
 			buttons.forEach(button => button.style.cursor = `url(${cursorPoint}), auto`);
 			const links = document.querySelectorAll('a');
-			links.forEach(link => link.style.cursor = `url(${cursorPoint}), auto`);
+			links.forEach(link => link.style.cursor = `url(${cursorPoint}), auto`);}
+			else{
+				document.body.style.cursor = 'auto';
+				const buttons = document.querySelectorAll('button');
+				buttons.forEach(button => button.style.cursor = 'auto');
+				const links = document.querySelectorAll('a');
+				links.forEach(link => link.style.cursor = 'auto');
+			}
 			});
 
 
