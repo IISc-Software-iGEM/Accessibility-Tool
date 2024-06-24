@@ -409,46 +409,71 @@ document.addEventListener("DOMContentLoaded", function() {
 				}
 			});
 
+			function applyColorFilter(matrix) {
+				let existingStyle = document.querySelector('#colorFilterStyle');
+				if (existingStyle) existingStyle.remove();
+				
+				const stylesheet = document.createElement('style');
+				stylesheet.id = 'colorFilterStyle';
+				stylesheet.textContent = `
+				  .main{
+					filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="colorBlindness"><feColorMatrix type="matrix" values="${matrix.join(' ')}" /></filter></svg>#colorBlindness');
+				  }
+				`;
+				// make this only affect div elelment with class main
+				document.head.appendChild(stylesheet);
+
+
+			  }
+
 			//Protanopia
 			const protanopiaButton = document.querySelector('#Protanopia');
 			protanopiaButton.addEventListener('click', function() {
-					const stylesheet = document.createElement('style');
-					stylesheet.textContent = `
-					  * {
-						-webkit-filter: sepia(0.7) protanopia(1); /* Webkit browsers */
-						filter: sepia(0.7) protanopia(1); /* Standard filter */
-					  }
-					`;
-					document.head.appendChild(stylesheet); 
+				applyColorFilter([
+					0.56667, 0.43333, 0, 0, 0,
+					0.55833, 0.44167, 0, 0, 0,
+					0, 0.24167, 0.75833, 0, 0,
+					0, 0, 0, 1, 0
+				  ]);
 			});
 
 			//Deuteranopia
 			const deuteranopiaButton = document.querySelector('#Deuteranopia');
 			deuteranopiaButton.addEventListener('click', function() {
+				applyColorFilter([
+					0.625, 0.375, 0, 0, 0,
+					0.7, 0.3, 0, 0, 0,
+					0, 0.3, 0.7, 0, 0,
+					0, 0, 0, 1, 0
+				  ]);
 				
 			});
 
 			//Tritanopia
 			const tritanopiaButton = document.querySelector('#Tritanopia');
 			tritanopiaButton.addEventListener('click', function() {
-				const stylesheet = document.createElement('style');
-				stylesheet.textContent = `
-				  * {
-					-webkit-filter: sepia(0.7) tritanopia(1); /* Webkit browsers */
-					filter: sepia(0.7) tritanopia(1); /* Standard filter */
-				  }
-				`;
-				document.head.appendChild(stylesheet);
+				applyColorFilter([
+					0.95, 0.05, 0, 0, 0,
+					0, 0.43333, 0.56667, 0, 0,
+					0, 0.475, 0.525, 0, 0,
+					0, 0, 0, 1, 0
+				  ]);
 				
 			});
 
 			//Achromatopsia
 			const achromatopsiaButton = document.querySelector('#Acromatopsia');
 			achromatopsiaButton.addEventListener('click', function() {
-				main.classList.toggle('grayscale');
+				applyColorFilter([
+					0.299, 0.587, 0.114, 0, 0,
+					0.299, 0.587, 0.114, 0, 0,
+					0.299, 0.587, 0.114, 0, 0,
+					0, 0, 0, 1, 0
+				  ]);
+				
 			});
 
-
+			
 			//ADHD
 			const adhdButton = document.getElementById('ADHD');
 			const toggleInput2 = document.querySelector('.toggle-input-2');
@@ -540,6 +565,11 @@ document.addEventListener("DOMContentLoaded", function() {
 				if (bottomBox) {
 					bottomBox.remove();
 				}
+
+				// remove color filter
+				let existingStyle = document.querySelector('#colorFilterStyle');
+				if (existingStyle) existingStyle.remove();
+				
 
 			});
 
