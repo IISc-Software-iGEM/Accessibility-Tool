@@ -478,6 +478,18 @@ document.addEventListener("DOMContentLoaded", function() {
 			const adhdButton = document.getElementById('ADHD');
 			const toggleInput2 = document.querySelector('.toggle-input-2');
 			adhdButton.addEventListener('click', function() {
+				if(toggleInput1.checked){
+					toggleInput1.checked =false;
+					lowvisionbutton.click();
+				}
+				if(toggleInput3.checked){
+					toggleInput3.checked = false;
+					epilepsyButton.click();
+				}
+				if(toggleInput4.checked){
+					toggleInput4.checked = false;
+					dyslexiaButton.click();
+				}
 				if( toggleInput2.checked) {
 					readFocusButton.click();	
 				} 
@@ -487,6 +499,18 @@ document.addEventListener("DOMContentLoaded", function() {
 			const dyslexiaButton = document.getElementById('Dyslexia');
 			const toggleInput4 = document.querySelector('.toggle-input-4');
 			dyslexiaButton.addEventListener('click', function() {
+				if(toggleInput1.checked){
+					toggleInput1.checked = false;
+					lowvisionbutton.click();
+				}
+				if(toggleInput3.checked){
+					toggleInput3.checked = false;
+					epilepsyButton.click();
+				}
+				if( toggleInput2.checked) {
+					toggleInput2.checked= false;
+					adhdButton.click();	
+				} 
 				if( toggleInput4.checked) {
 					let existingStyle = document.querySelector('#FontStyle');
 					if (existingStyle) existingStyle.remove();
@@ -511,6 +535,18 @@ document.addEventListener("DOMContentLoaded", function() {
 			const epilepsyButton = document.getElementById('Epilepsy');
 			const toggleInput3 = document.querySelector('.toggle-input-3');
 			epilepsyButton.addEventListener('click', function() {
+				if(toggleInput1.checked){
+					toggleInput1.checked = false;
+					lowvisionbutton.click();
+				}
+				if(toggleInput4.checked){
+					toggleInput4.checked = false;
+					dyslexiaButton.click();
+				}
+				if( toggleInput2.checked) {
+					toggleInput2.checked = false;
+					adhdButton.click();	
+				} 
 				if( toggleInput3.checked) {
 					main.classList.toggle('grayscale');
 				} else {	
@@ -523,6 +559,18 @@ document.addEventListener("DOMContentLoaded", function() {
 			const toggleInput1 = document.querySelector('.toggle-input-1');
 
 			lowvisionbutton.addEventListener('click', function() {
+				if(toggleInput3.checked){
+					toggleInput3.checked =false;
+					epilepsyButton.click();
+				}
+				if(toggleInput4.checked){
+					toggleInput4.checked = false;
+					dyslexiaButton.click();
+				}
+				if( toggleInput2.checked) {
+					toggleInput2.checked = false;
+					adhdButton.click();	
+				} 
 				if( toggleInput1.checked) {
 					increaseFontSizeButton.click();
 					createMain.style.zoom = '120%';
@@ -598,6 +646,23 @@ document.addEventListener("DOMContentLoaded", function() {
 				let existingStyle2 = document.querySelector('#FontStyle');
 				if (existingStyle2) existingStyle2.remove();
 				
+				if(toggleInput3.checked){
+					toggleInput3.checked =false;
+					epilepsyButton.click();
+				}
+				if(toggleInput4.checked){
+					toggleInput4.checked = false;
+					dyslexiaButton.click();
+				}
+				if( toggleInput2.checked) {
+					toggleInput2.checked = false;
+					adhdButton.click();	
+				}
+				
+				if( toggleInput1.checked) {
+					toggleInput1.checked = false;
+					lowvisionbutton.click();	
+				} 
 
 			});
 
