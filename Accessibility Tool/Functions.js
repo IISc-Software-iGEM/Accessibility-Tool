@@ -479,8 +479,32 @@ document.addEventListener("DOMContentLoaded", function() {
 			const toggleInput2 = document.querySelector('.toggle-input-2');
 			adhdButton.addEventListener('click', function() {
 				if( toggleInput2.checked) {
-					readFocusButton.click();
+					readFocusButton.click();	
 				} 
+			});
+
+			//dyslexia
+			const dyslexiaButton = document.getElementById('Dyslexia');
+			const toggleInput4 = document.querySelector('.toggle-input-4');
+			dyslexiaButton.addEventListener('click', function() {
+				if( toggleInput4.checked) {
+					let existingStyle = document.querySelector('#FontStyle');
+					if (existingStyle) existingStyle.remove();
+					const stylesheet = document.createElement('style');
+					stylesheet.id = 'FontStyle';
+					stylesheet.textContent = `
+					.main {
+						font-family: 'OpenDyslexic', Arial, Verdana, sans-serif;
+						line-height: 1.5;
+						letter-spacing: 0.05em;
+					  }
+					`;
+					document.head.appendChild(stylesheet);	
+				} 
+				else{
+					let existingStyle = document.querySelector('#FontStyle');
+					if (existingStyle) existingStyle.remove();
+				}
 			});
 			
 			//epilepsy
@@ -567,8 +591,12 @@ document.addEventListener("DOMContentLoaded", function() {
 				}
 
 				// remove color filter
-				let existingStyle = document.querySelector('#colorFilterStyle');
-				if (existingStyle) existingStyle.remove();
+				let existingStyle1 = document.querySelector('#colorFilterStyle');
+				if (existingStyle1) existingStyle1.remove();
+
+				// remove font family
+				let existingStyle2 = document.querySelector('#FontStyle');
+				if (existingStyle2) existingStyle2.remove();
 				
 
 			});
