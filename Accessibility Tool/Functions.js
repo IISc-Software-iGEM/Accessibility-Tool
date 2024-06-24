@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		})
 		.then(response => response.text())
 		.then(htmlContent => {
-			// create whole body in div element and give it class name main
 			var createMain = document.createElement('div');
 			createMain.className = 'main';
 			createMain.innerHTML = document.body.innerHTML;
@@ -190,14 +189,28 @@ document.addEventListener("DOMContentLoaded", function() {
 
 			//zoom-in function
 			const zoomInButton = document.querySelector('#zoomin');
+			let zoominbutton = false;
 			zoomInButton.addEventListener('click', function() {
-				document.body.style.zoom = '150%';
+				zoominbutton = !zoominbutton;
+				if(zoominbutton){
+					main.style.zoom = '150%';
+				}
+				else{
+					main.style.zoom = '100%';
+				}
 			});
 
 			//zoom-out function
 			const zoomOutButton = document.querySelector('#zoomout');
+			let zoomoutbutton = false;
 			zoomOutButton.addEventListener('click', function() {
-				document.body.style.zoom = '100%';
+				zoomoutbutton =!zoomoutbutton;
+				if(zoomoutbutton){
+					main.style.zoom = '50%';
+				}
+				else{
+					main.style.zoom = '100%';
+				}
 			});
 
 			//readmode
@@ -398,6 +411,14 @@ document.addEventListener("DOMContentLoaded", function() {
 			//Tritanopia
 			const tritanopiaButton = document.querySelector('#Tritanopia');
 			tritanopiaButton.addEventListener('click', function() {
+				const stylesheet = document.createElement('style');
+				stylesheet.textContent = `
+				  * {
+					-webkit-filter: sepia(0.7) tritanopia(1); /* Webkit browsers */
+					filter: sepia(0.7) tritanopia(1); /* Standard filter */
+				  }
+				`;
+				document.head.appendChild(stylesheet);
 				
 			});
 
@@ -428,10 +449,21 @@ document.addEventListener("DOMContentLoaded", function() {
 				}
 			});
 
-			//dyslexia
-			const dyslexiaButton = document.getElementById('Dyslexia');
-			const toggleInput4 = document.querySelector('.toggle-input-4');	
+			//lowvision
+			const lowvisionbutton = document.getElementById('lowvision');
+			const toggleInput1 = document.querySelector('.toggle-input-1');
 
+			lowvisionbutton.addEventListener('click', function() {
+				if( toggleInput1.checked) {
+					increaseFontSizeButton.click();
+					createMain.style.zoom = '120%';
+				}
+				else{
+					document.body.style.fontSize = '';
+					createMain.style.zoom = '';
+				}
+			});
+			
 			//toggle switch
 			// const toggleSwitch = document.querySelector('.toggle-switch');
 			// const toggleInput = document.querySelector('.toggle-input');
@@ -449,6 +481,12 @@ document.addEventListener("DOMContentLoaded", function() {
 			const fontsize = document.body.style.fontSize;
 			const resetButton = document.querySelector("#reset");
 			resetButton.addEventListener('click', function() {
+
+				const button = document.querySelectorAll('button');
+				button.forEach(button => button.style.cursor = `auto`);
+				const link = document.querySelectorAll('a');
+				link.forEach(link => link.style.cursor = `auto`);
+
 				if (main.classList.contains('grayscale')) {
 					main.classList.remove('grayscale');
 				}
@@ -467,6 +505,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				document.body.style.cursor = 'auto';
 				document.body.style.backgroundColor = '';
 				document.body.style.color = '';
+				
 				document.body.style.zoom = '100%';
 				const links = document.querySelectorAll('a');
 				links.forEach(link => link.style.backgroundColor = '');
