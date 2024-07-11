@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 			increaseFontSizeButton.addEventListener('click', function() {
 			  const currentFontSize = window.getComputedStyle(document.body).fontSize;
-			  let fontSizeUnit = 'px'; // Default unit (can be adjusted)
+			  let fontSizeUnit = 'px'; 
 			  let fontSizeValue = parseFloat(currentFontSize);
 			
 			  if (currentFontSize.includes('em')) {
@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 			decreaseFontSizeButton.addEventListener('click', function(){
 			  const currentFontSize = window.getComputedStyle(document.body).fontSize;
-			  let fontSizeUnit = 'px'; // Default unit (can be adjusted)
+			  let fontSizeUnit = 'px'; 
 			  let fontSizeValue = parseFloat(currentFontSize);
 			
 			  if (currentFontSize.includes('em')) {
