@@ -1,6 +1,6 @@
 # Accessibility Toolbar Plugin 
 
-#### This Accessibility Tool is made under the iGEM Project. Providing a JavaScrip-based tool to enhance the accessibility of web content for users with disabilities
+#### This Accessibility Tool is made under iGEM Project. Providing a JavaScrip-based tool to enhance the accessibility of web content for users with disabilities
 <br>
 
 This tool has been divided into its respective sections to allow the user to navigate the features they want to use easily. 
