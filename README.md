@@ -49,7 +49,11 @@ https://github.com/IISc-Software-iGEM/Accessibility-Tool.git
 ```bash
 <script src="{{ url_for('static', filename = 'Functions.js')}}"></script>
 ```
-<br>
+<be>
+<!--
+    for any query you can contact [yashkamble](https://github.com/YasKam24)
+    --->
+
 
 
 
