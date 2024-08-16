@@ -32,9 +32,9 @@ This tool has been divided into its respective sections to allow the user to nav
  * **General**
     1. **Zoom-In** : Zooms-in the page by 50% *(i.e to 150%)*.
     2. **Zoom-Out** : Zooms-out the page by 50% *(i.e to 50%)*.
-    3. **Link-Highlight**: Highlights all the links on the webpage. This Highlighted links will be un-highlighted once you hover them.
-    4. **Read-Mode**: Converts the background color of the webpage to black and Font-color to white.
-    5. **Button-Highlight**: Highlights all the buttons on the webpage. This Highlighted button will be un-highlighted once you hover it.
+    3. **Link-Highlight**: Highlights all the links on the webpage. These highlighted links will be unhighlighted once you hover over them.
+    4. **Read-Mode**: Converts the background color of the webpage to black and font color to white.
+    5. **Button-Highlight**: Highlights all the buttons on the webpage. This highlighted button will be unhighlighted once you hover over it.
     6. **Read-Focus**: Allows users to highlight a specific area of the page by moving the mouse.
  * **Reset**: The user can restore the webpage to its default appearance and behavior.
 
