@@ -50,9 +50,6 @@ https://github.com/IISc-Software-iGEM/Accessibility-Tool.git
 <script src="{{ url_for('static', filename = 'Functions.js')}}"></script>
 ```
 <be>
-<!--
-    for any query you can contact [yashkamble](https://github.com/YasKam24)
-    --->
 
 
 
