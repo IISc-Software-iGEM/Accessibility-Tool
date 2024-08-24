@@ -4,7 +4,7 @@
 <br>
 
 This tool has been divided into its respective sections to allow the user to navigate the features they want to use easily. 
-You can preview the tool by visiting [sample website]{https://iisc-software-igem.github.io/Accessibility-Tool}. After opening the website in the bottom-left corner, you will see an accessible overlay option by double-clicking it you will be able to see the Accessibility Toolbar Menu. Now you can use and test various features of the Accessible Tool.
+You can preview the tool by visiting [sample website](https://iisc-software-igem.github.io/Accessibility-Tool). After opening the website in the bottom-left corner, you will see an accessible overlay option by double-clicking it you will be able to see the Accessibility Toolbar Menu. Now you can use and test various features of the Accessible Tool.
 
 #### Features
 * **Presets**
