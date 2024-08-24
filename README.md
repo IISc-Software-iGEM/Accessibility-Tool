@@ -52,7 +52,7 @@ https://github.com/IISc-Software-iGEM/Accessibility-Tool.git
 #### Rules and Regulations
 * If you are using our tool, Please give us credit for using.
 
-*~ IISc-Software*
+_~ IISc-Software_
 
 
 
