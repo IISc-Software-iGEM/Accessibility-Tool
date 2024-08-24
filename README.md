@@ -1,6 +1,6 @@
 ### Accessibility Toolbar Plugin 
 
-#### This Accessibility Tool is made under iGEM Project. A JavaScript-based tool that can enhance the accessibility of web content for users with disabilities. We have added the accessibilities features such that it will help them format the web content according to their specific disabilities or set things manually. 
+#### This Accessibility Tool is made under iGEM Project. A JavaScript-based tool that can enhance the accessibility of web content for users with disabilities. We have added the accessibility features such that it will help them format the web content according to their specific disabilities or set things manually. 
 <br>
 
 This tool has been divided into its respective sections to allow the user to navigate the features they want to use easily. 
@@ -52,7 +52,7 @@ https://github.com/IISc-Software-iGEM/Accessibility-Tool.git
 #### Rules and Regulations
 * If you are using our tool, Please give us credit for using it.
 
-  *~ IISc-Software *
+  *~ IISc-Software*
 
 
 
