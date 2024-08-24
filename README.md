@@ -1,6 +1,6 @@
-# Accessibility Toolbar Plugin 
+### Accessibility Toolbar Plugin 
 
-#### This Accessibility Tool is made under iGEM Project. Providing a JavaScrip-based tool to enhance the accessibility of web content for users with disabilities
+#### This Accessibility Tool is made under iGEM Project. A JavaScript-based tool which can enhance the accessibility of web content for users with disabilities. We have added the accessiblities features such that it will help them format the webcontent according to thier specific disbalities or setting things manually. 
 <br>
 
 This tool has been divided into its respective sections to allow the user to navigate the features they want to use easily. 
@@ -38,8 +38,7 @@ This tool has been divided into its respective sections to allow the user to nav
     6. **Read-Focus**: Allows users to highlight a specific area of the page by moving the mouse.
  * **Reset**: The user can restore the webpage to its default appearance and behavior.
 
-
-## Integeration
+### Integeration
 
 * Clone the repo in the Static directory of your website *(for flask framework)*.
 ```bash
@@ -49,7 +48,12 @@ https://github.com/IISc-Software-iGEM/Accessibility-Tool.git
 ```bash
 <script src="{{ url_for('static', filename = 'Functions.js')}}"></script>
 ```
-<be>
+
+#### Rules and Regulations
+* If you are using our tool, Please give us credit for using.
+
+*~ IISc-Software*
+
 
 
 
