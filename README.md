@@ -4,6 +4,7 @@
 <br>
 
 This tool has been divided into its respective sections to allow the user to navigate the features they want to use easily. 
+You can preview the tool by visiting [sample website]{https://iisc-software-igem.github.io/Accessibility-Tool}. After opening the website in the bottom-left corner, you will see an accessible overlay option by double-clicking it you will be able to see the Accessibility Toolbar Menu. Now you can use and test various features of the Accessible Tool.
 
 #### Features
 * **Presets**
@@ -19,7 +20,7 @@ This tool has been divided into its respective sections to allow the user to nav
 * **Contrast**
     1. **Invert-Color**: Flips the color of the webpage
     2. **Grayscale**: Removes the color of the webpage essentially making it black-white.
-    3. **Low-Saturation**: Reduces the color-intensity of the webpage.
+    3. **Low-Saturation**: Reduces the color intensity of the webpage.
     4. **HIgh-Saturation**: Increases the color_intensity
  * **Cursor**
     1. **White-Cursor** : Changes your Display Cursor to *White* in color.
