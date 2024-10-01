@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	const stylesURL = './styles.scss'; 
 	
 	var link = document.createElement('link');
-	link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css';
+	// link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css';
 	link.rel = 'stylesheet';
 	document.head.appendChild(link);
 
