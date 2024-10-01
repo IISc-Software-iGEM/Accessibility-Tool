@@ -37,11 +37,11 @@ document.addEventListener("DOMContentLoaded", function() {
 			const accessToolBar = document.querySelector(".access-tool-bar");
 			const closeButton = document.querySelector(".close-button");
 			const main = document.querySelector('.main');
-
+			
 			function toggleAccessibilityToolBar() {
 			if (accessToolBar.style.visibility === "hidden") {
 				accessToolBar.style.visibility = "visible";
-				accessToolBar.style.opacity = 1; 
+				accessToolBar.style.opacity = 1;
 			} else {
 				accessToolBar.style.visibility = "hidden";
 				accessToolBar.style.opacity = 0;
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 			increaseFontSizeButton.addEventListener('click', function() {
 			  const currentFontSize = window.getComputedStyle(document.body).fontSize;
-			  let fontSizeUnit = 'px'; 
+			  let fontSizeUnit = 'px'; // Default unit (can be adjusted)
 			  let fontSizeValue = parseFloat(currentFontSize);
 			
 			  if (currentFontSize.includes('em')) {
@@ -140,10 +140,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 			// decrease Font Size function
 			const decreaseFontSizeButton = document.querySelector('#decreasefontsize');
-
 			decreaseFontSizeButton.addEventListener('click', function(){
 			  const currentFontSize = window.getComputedStyle(document.body).fontSize;
-			  let fontSizeUnit = 'px'; 
+			  let fontSizeUnit = 'px'; // Default unit (can be adjusted)
 			  let fontSizeValue = parseFloat(currentFontSize);
 			
 			  if (currentFontSize.includes('em')) {
@@ -151,7 +150,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			  } else if (currentFontSize.includes('rem')) {
 				fontSizeUnit = 'rem';
 			  }
-			
 			  const newFontSize = fontSizeValue / 1.2;
 			  document.body.style.fontSize = newFontSize + fontSizeUnit;
 			});
@@ -159,7 +157,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 			//increase letter spacing function
 			const increaseLetterSpacingButton = document.querySelector('#increaseletterspacing');
-			
 			increaseLetterSpacingButton.addEventListener('click', function() {
 				const currentLetterSpacing = window.getComputedStyle(document.body).letterSpacing;
 				let letterSpacingValue = parseFloat(currentLetterSpacing);
@@ -194,9 +191,11 @@ document.addEventListener("DOMContentLoaded", function() {
 				zoominbutton = !zoominbutton;
 				if(zoominbutton){
 					main.style.zoom = '150%';
+					zoomInButton.style.backgroundColor = 'lightblue';
 				}
 				else{
 					main.style.zoom = '100%';
+					zoomInButton.style.backgroundColor = '';
 				}
 			});
 
@@ -207,9 +206,11 @@ document.addEventListener("DOMContentLoaded", function() {
 				zoomoutbutton =!zoomoutbutton;
 				if(zoomoutbutton){
 					main.style.zoom = '50%';
+					zoomOutButton.style.backgroundColor = 'lightblue';
 				}
 				else{
 					main.style.zoom = '100%';
+					zoomOutButton.style.backgroundColor = '';
 				}
 			});
 
@@ -223,9 +224,11 @@ document.addEventListener("DOMContentLoaded", function() {
 			if (isReadModeEnabled) {
 				document.body.style.backgroundColor = 'black';
 				document.body.style.color = 'white';
+				readModeButton.style.backgroundColor = 'lightblue';
 			} else {
 				document.body.style.backgroundColor = '';
 				document.body.style.color = '';
+				readModeButton.style.backgroundColor = '';
 			}
 			});
 
@@ -238,12 +241,14 @@ document.addEventListener("DOMContentLoaded", function() {
 			whiteCursorButton.addEventListener('click', function() {
 			whitecursorbutton = !whitecursorbutton;
 			if(whitecursorbutton){	
+			whiteCursorButton.style.backgroundColor = 'lightblue';
 			document.body.style.cursor = `url(${cursorImageUrl}), auto`;
 			const buttons = document.querySelectorAll('button');
 			buttons.forEach(button => button.style.cursor = `url(${cursorPointer}), auto`);
 			const links = document.querySelectorAll('a');
 			links.forEach(link => link.style.cursor = `url(${cursorPointer}), auto`);}
 			else{
+				whiteCursorButton.style.backgroundColor = '';
 				document.body.style.cursor = 'auto';
 				const buttons = document.querySelectorAll('button');
 				buttons.forEach(button => button.style.cursor = 'auto');
@@ -260,12 +265,14 @@ document.addEventListener("DOMContentLoaded", function() {
 			blackCursorButton.addEventListener('click', function() {
 			blackcursorbutton = !blackcursorbutton;
 			if (blackcursorbutton) {
+			blackCursorButton.style.backgroundColor = 'lightblue';
 			document.body.style.cursor = `url(${cursorImage}), auto`;
 			const buttons = document.querySelectorAll('button');
 			buttons.forEach(button => button.style.cursor = `url(${cursorPoint}), auto`);
 			const links = document.querySelectorAll('a');
 			links.forEach(link => link.style.cursor = `url(${cursorPoint}), auto`);}
 			else{
+				blackCursorButton.style.backgroundColor = '';
 				document.body.style.cursor = 'auto';
 				const buttons = document.querySelectorAll('button');
 				buttons.forEach(button => button.style.cursor = 'auto');
@@ -279,15 +286,12 @@ document.addEventListener("DOMContentLoaded", function() {
 			const highlightLinksButton = document.querySelector('#linkhighlighter');
 			highlightLinksButton.addEventListener('click', function() {
 				const toggleHighlightButton = document.getElementById('toggle-link-highlight'); 
-			  
 				const links = document.querySelectorAll('a'); 
-			  
 				function toggleHighlight(enabled) {
 				  links.forEach(link => {
 					link.style.backgroundColor = enabled ? "lightblue" : '';
 				  });
 				}
-			  
 				if (toggleHighlightButton) { 
 				  toggleHighlightButton.addEventListener('click', function() {
 					const enabled = !document.body.classList.contains('link-highlight-enabled');
@@ -297,8 +301,6 @@ document.addEventListener("DOMContentLoaded", function() {
 				} else { 
 				  toggleHighlight(true);
 				}
-			  
-				
 				links.forEach(link => {
 				  link.addEventListener('mouseover', function() {
 					this.style.backgroundColor = "lightblue" + '80'; 
@@ -316,7 +318,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 			highlightButtonsButton.addEventListener('click', function() {
 				const toggleHighlightButton = document.getElementById('toggle-button-highlight'); 
-			  
+				
 				const buttons = document.querySelectorAll('button');
 			  
 				function toggleHighlight(enabled) {
@@ -353,6 +355,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			readFocusButton.addEventListener('click', function() {
 				readfocus = !readfocus;
 				if(readfocus){
+				readFocusButton.style.backgroundColor = 'lightblue';
 				topbox = document.createElement('div');
 				topbox.innerHTML = document.body.innerHTML;
 				topbox.className = 'black-box top-box';
@@ -378,6 +381,7 @@ document.addEventListener("DOMContentLoaded", function() {
 					bottomBox.style.height = `${bottomBoxHeight}px`;
 				});
 			} else {
+				readFocusButton.style.backgroundColor = '';
 				const topBox = document.querySelector('.top-box');
 				const bottomBox = document.querySelector('.bottom-box');
 				if (topBox) {
@@ -517,12 +521,18 @@ document.addEventListener("DOMContentLoaded", function() {
 					const stylesheet = document.createElement('style');
 					stylesheet.id = 'FontStyle';
 					stylesheet.textContent = `
-					.main {
-						font-family: 'OpenDyslexic', Arial, Verdana, sans-serif;
-						line-height: 1.5;
-						letter-spacing: 0.05em;
-					  }
-					`;
+     		       	@font-face {
+                	font-family: 'OpenDyslexic';
+       	        	src: url('./Src/OpenDyslexic-Regular.otf') format('truetype');
+              	  	font-weight: normal;
+             	   	font-style: normal;
+            		}
+            		.main {
+              	  	font-family: Arial, Verdana, sans-serif;
+             	   	line-height: 1.5;
+            	    letter-spacing: 0.05em;
+          			}
+        			`;
 					document.head.appendChild(stylesheet);	
 				} 
 				else{
@@ -622,8 +632,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				document.body.style.cursor = 'auto';
 				document.body.style.backgroundColor = '';
 				document.body.style.color = '';
-				
-				document.body.style.zoom = '100%';
+				main.style.zoom = '100%';
 				const links = document.querySelectorAll('a');
 				links.forEach(link => link.style.backgroundColor = '');
 				const buttons = document.querySelectorAll('button');
@@ -637,6 +646,14 @@ document.addEventListener("DOMContentLoaded", function() {
 				if (bottomBox) {
 					bottomBox.remove();
 				}
+				// make the default backaground color for the button
+				readFocusButton.style.backgroundColor = '';
+				whiteCursorButton.style.backgroundColor = '';
+				blackCursorButton.style.backgroundColor = '';
+				readModeButton.style.backgroundColor = '';
+				zoomInButton.style.backgroundColor = '';
+				zoomOutButton.style.backgroundColor = '';
+
 
 				// remove color filter
 				let existingStyle1 = document.querySelector('#colorFilterStyle');
