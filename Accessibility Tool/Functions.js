@@ -2,8 +2,8 @@
 
 document.addEventListener("DOMContentLoaded", function() {
   
-	const accessibilityMenuURL = './Toolbar.html'; 	
-	const stylesURL = './styles.scss'; 
+	const accessibilityMenuURL = './static/Toolbar.html'; 	
+	const stylesURL = './static/styles.scss'; 
 	
 	var link = document.createElement('link');
 	// link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css';
@@ -235,8 +235,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			
 			//whitecursor
 			const whiteCursorButton = document.querySelector('#whitecursor');
-			const cursorImageUrl = './Images/pointer-white.png';
-			const cursorPointer = './Images/hand-pointer-white.png'; 
+			const cursorImageUrl = './static/Images_for_toolbar/pointer-white.png';
+			const cursorPointer = './static/Images_for_toolbar/hand-pointer-white.png'; 
 			let whitecursorbutton= false;
 			whiteCursorButton.addEventListener('click', function() {
 			whitecursorbutton = !whitecursorbutton;
@@ -259,8 +259,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 			//blackcursor
 			const blackCursorButton = document.querySelector('#blackcursor');
-			const cursorImage = './Images/black-pointer.png';
-			const cursorPoint = './Images/hand-pointer-black.png';
+			const cursorImage = './static/Images_for_toolbar/black-pointer.png';
+			const cursorPoint = './static/Images_for_toolbar/hand-pointer-black.png';
 			let blackcursorbutton = false; 
 			blackCursorButton.addEventListener('click', function() {
 			blackcursorbutton = !blackcursorbutton;
