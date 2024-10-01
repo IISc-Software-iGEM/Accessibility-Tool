@@ -2,8 +2,8 @@
 
 document.addEventListener("DOMContentLoaded", function() {
   
-	const accessibilityMenuURL = './static/Toolbar.html'; 	
-	const stylesURL = './static/styles.scss'; 
+	const accessibilityMenuURL = './Toolbar.html'; 	
+	const stylesURL = './styles.scss'; 
 	
 	var link = document.createElement('link');
 	// link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css';
@@ -235,8 +235,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			
 			//whitecursor
 			const whiteCursorButton = document.querySelector('#whitecursor');
-			const cursorImageUrl = './static/Images_for_toolbar/pointer-white.png';
-			const cursorPointer = './static/Images_for_toolbar/hand-pointer-white.png'; 
+			const cursorImageUrl = './Images/pointer-white.png';
+			const cursorPointer = './Images/hand-pointer-white.png'; 
 			let whitecursorbutton= false;
 			whiteCursorButton.addEventListener('click', function() {
 			whitecursorbutton = !whitecursorbutton;
@@ -259,8 +259,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 			//blackcursor
 			const blackCursorButton = document.querySelector('#blackcursor');
-			const cursorImage = './static/Images_for_toolbar/black-pointer.png';
-			const cursorPoint = './static/Images_for_toolbar/hand-pointer-black.png';
+			const cursorImage = './Images/black-pointer.png';
+			const cursorPoint = './Images/hand-pointer-black.png';
 			let blackcursorbutton = false; 
 			blackCursorButton.addEventListener('click', function() {
 			blackcursorbutton = !blackcursorbutton;
@@ -484,7 +484,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			adhdButton.addEventListener('click', function() {
 				if(toggleInput1.checked){
 					toggleInput1.checked =false;
-					lowvisionbutton.click();
+					visualimpairmentbutton.click();
 				}
 				if(toggleInput3.checked){
 					toggleInput3.checked = false;
@@ -505,7 +505,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			dyslexiaButton.addEventListener('click', function() {
 				if(toggleInput1.checked){
 					toggleInput1.checked = false;
-					lowvisionbutton.click();
+					visualimpairmentbutton.click();
 				}
 				if(toggleInput3.checked){
 					toggleInput3.checked = false;
@@ -547,7 +547,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			epilepsyButton.addEventListener('click', function() {
 				if(toggleInput1.checked){
 					toggleInput1.checked = false;
-					lowvisionbutton.click();
+					visualimpairmentbutton.click();
 				}
 				if(toggleInput4.checked){
 					toggleInput4.checked = false;
@@ -564,11 +564,11 @@ document.addEventListener("DOMContentLoaded", function() {
 				}
 			});
 
-			//lowvision
-			const lowvisionbutton = document.getElementById('lowvision');
+			//visualimpairment
+			const visualimpairmentbutton = document.getElementById('visualimpairment');
 			const toggleInput1 = document.querySelector('.toggle-input-1');
 
-			lowvisionbutton.addEventListener('click', function() {
+			visualimpairmentbutton.addEventListener('click', function() {
 				if(toggleInput3.checked){
 					toggleInput3.checked =false;
 					epilepsyButton.click();
@@ -678,7 +678,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				
 				if( toggleInput1.checked) {
 					toggleInput1.checked = false;
-					lowvisionbutton.click();	
+					visualimpairmentbutton.click();	
 				} 
 
 			});
